@@ -227,6 +227,9 @@ a.term:hover {
 a.term:visited{
 	color: fuchsia;
 }
+a.term:visited{
+	color: fuchsia;
+}
 
 /*********** metadata table styles*************/
 table.mdtable td {
