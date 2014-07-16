@@ -569,9 +569,10 @@ public class MircDocument {
 				if (hasOwner(user)) return true;
 			}
 
-			//For the delete action, only the owner or admin is ever authorized.
-			//Therefore, if the action is delete, return false now.
-			if (action.equals("delete")) return false;
+			//For the delete action, only the owner or admin is ever authorized
+			//to delete a non-draft document, but any author can delete a draft
+			//document, so if the document is not draft, return false now.
+			if (action.equals("delete")) return isDraft();
 
 			//For non-owners or non-authenticated users, the rule is that if an action
 			//authorization does not exist in the document, read and export actions are

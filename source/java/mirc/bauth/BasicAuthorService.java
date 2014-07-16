@@ -239,11 +239,16 @@ public class BasicAuthorService extends Servlet {
 				setElement(root,"authorization/owner", req.getParameter("username"));
 				setElement(root,"category", req.getParameter("category"));
 
+
+				//******************************************
+				//This code was removed intentionally to
+				//allow admins to preload all  permissions
+				//******************************************
 				//Set the read and update privileges.
 				//In this service, the read and update privileges
 				//are granted only to the owner.
-				setElement(root,"authorization/read", "");
-				setElement(root,"authorization/update", "");
+				//setElement(root,"authorization/read", "");
+				//setElement(root,"authorization/update", "");
 
 				//Insert the section elements
 				Node child = root.getFirstChild();

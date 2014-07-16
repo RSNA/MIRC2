@@ -218,8 +218,11 @@ table.pttable td.ptlabel {
 a.term {
 	text-decoration:none;
 }
+a.term:visited {
+	color:white;
+}
 a.term:hover {
-	text-decoration: underline;
+	text-decoration:underline;
 }
 a.term:visited{
 	color: fuchsia;
